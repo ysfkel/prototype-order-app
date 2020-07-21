@@ -17,7 +17,8 @@ export const store = new Vuex.Store({
             currentPage: 1,
             pageCount: 4,
             offset: 0  
-        }, dateRange: {
+        },
+        dateRange: {
             startDate: null,
             endDate: null
         }, 
@@ -33,6 +34,14 @@ export const store = new Vuex.Store({
         pager: (state) => {
             return {
                 ...state.pager
+            }
+        }, 
+        searchFields: (state) => {
+            return {
+                dateRange: {
+                   ...state.dateRange,
+                   search:state.search
+                }
             }
         }
     }, mutations:{

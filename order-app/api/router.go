@@ -43,7 +43,7 @@ func (r *Router) registerMiddlewares() {
 	// Enable CORS
 	r.HTTP.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 
-		AllowOrigins: []string{"http://client:6000"},
+		AllowOrigins: []string{"http://localhost:8080"},
 		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept,
 			echo.HeaderAuthorization},
 	},

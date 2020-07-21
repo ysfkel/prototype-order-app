@@ -18,6 +18,7 @@ services:
     ports: 
      - "27021:27017"
   backend:
+    container_name: server
     build: ./order-app
     restart: always
     ports:
@@ -29,6 +30,5 @@ services:
       build: ./order-app-frontend
       restart: always
       ports:
-        - "6000:80"
-      depends_on: 
-        - "backend" 
+        - "8080:80"
+      

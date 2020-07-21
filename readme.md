@@ -1,8 +1,8 @@
 # Order App
 
-This is a sample application that built with a Go backend and vuejs front end 
+This is a sample application  built with  Go backend and vuejs frontend 
 
-The applications displays a list of orders and also provides a searc functiionality.
+The applications displays a list of orders and also provides a search functionality.
 
 
 ## Getting Started
@@ -10,12 +10,8 @@ The applications displays a list of orders and also provides a searc functiional
 These instructions will get you a copy of the project up and running on your local machine.
 
 ### Prerequisites
-
-What things you need to install the software and how to install them
  
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
+### Installing 
 
 Ensure that you have Docker and docker compose installed on your system
 

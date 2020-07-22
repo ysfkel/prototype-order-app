@@ -45,33 +45,33 @@ http://localhost:8080/orders
 
 Directory name: order-app
 
-The backend project follows the domain driven design project structure and the following according 
+The backend project follows the domain driven design project structure according 
 to the following directories
 
 * Api
    This directory contains a single file in which the rest api routes are defined
 
 * Boot 
-   This direcory contains a single file in which code that bootstraps the application are written
+   This direcory contains a single file in which code that bootstrap the application is written
 
 * Controllers:
-   This directory contains controller that handles the Api routes
+   This directory contains a controller that handles the Api routes
 
 * Domain:
    This directory contains code that define the models and repository interfaces
 
 * Infratrsuture
-   This containers the following sub directories
-     * data_reader: Contains code that read test_data csv files 
+   This directory contains the following sub directories
+     * data_reader: Contains code that reads the csv files in test_data  
      * persistence: contains code that implement database repository interfaces 
         * Migration: Contains database migration code
-     * service Contains code that process the search and return result to the controller
+     * service Contains code that processes user request and returns the result to the controller
 
 ## Application Flow
    
 * User Makes a http request to fetch orders list 
-* The request hits the rest api routes located in the api directory 
-* The controller validates the user request and instantiates the service and passes the request to the    service located in the service directory
+* The request hits one of the rest api routes defines in the routers.go file  in the api directory 
+* The controller validates the user request and instantiates the service and passes the request to the service located in the service directory
 * the service retrieves the requested data from the database by making a call to the database repository
 * service returns the result to the controller 
 * controller returns response to the client 
